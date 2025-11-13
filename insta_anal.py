@@ -68,10 +68,7 @@ plt.title("Correlation Between Metrics")
 plt.show()
 
 import streamlit as st
-from streamlit_jupyter import StreamlitPatcher
-# Patch Streamlit to work in Jupyter
-StreamlitPatcher().jupyter()
-# Now you can use supported Streamlit commands
+
 st.set_page_config(page_title = "Digital Marketing Analysis")
 st.header("My Data Analysis for our instagram account")
 st.subheader("Hello Everyone, I'm Vedhesh.\n")
