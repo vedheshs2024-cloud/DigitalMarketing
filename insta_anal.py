@@ -5,9 +5,9 @@ import seaborn as sns
 import warnings
 warnings.filterwarnings("ignore")
 
-df = pd.read_csv(r"D:\blender\Instagram.csv")
+df = pd.read_csv(r"Instagram.csv")
 
-data = pd.read_csv(r"D:\blender\Instagram.csv")
+data = pd.read_csv(r"Instagram.csv")
 
 df.info()
 
