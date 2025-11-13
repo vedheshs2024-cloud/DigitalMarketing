@@ -74,13 +74,13 @@ st.header("My Data Analysis for our instagram account")
 st.subheader("Hello Everyone, I'm Vedhesh.\n")
 st.subheader(" This is my analysis of our instagram account reach in 7 days ")
 st.text("you want to see analysis one by one use below Buttons :")
-a = st.button("🏆 Highest Engagement Post Details:")
-b = st.button("Engagement Rate for Content Type(Reel/Post)")
-c = st.button("Engagement Rate Over Time ")
-z = st.button("Engagement by Post Time")
-e= st.button("Duration vs Engagement Rate")
-f= st.button("Correlation Between Metrics")
-g= st.button("Final")
+h = st.button("🏆 Highest Engagement Post Details:")
+j = st.button("Engagement Rate for Content Type(Reel/Post)")
+k = st.button("Engagement Rate Over Time ")
+l = st.button("Engagement by Post Time")
+m= st.button("Duration vs Engagement Rate")
+n= st.button("Correlation Between Metrics")
+p= st.button("Final")
 st.text(" OR you want to see mulTiple analysis in one use below checkpoints :")
 a = st.checkbox("🏆 Highest Engagement Post Details:")
 b = st.checkbox("Engagement Rate for Content Type(Reel/Post)")
@@ -89,18 +89,18 @@ d = st.checkbox("Engagement by Post Time")
 e= st.checkbox("Duration vs Engagement Rate")
 f= st.checkbox("Correlation Between Metrics")
 g= st.checkbox("Final")
-if a:
+if a or h:
     best_post = data.loc[data['Engagement Rate (%)'].idxmax()]
     st.subheader("\n🏆 Highest Engagement Post:")
     d=best_post[['Date Posted',"Post Time","Duration (sec)", 'Caption', 'Reach', 'Likes', 'Comments', 'Shares', 'Engagement Rate (%)']]
     st.write(d)
-if b:
+if b or j:
     st.pyplot(fg)
     st.write("📊 Key Interpretation \n",
     "The plot shows a significant difference in the average engagement rate between Reels and Posts.\n",
     "Posts have a substantially higher average engagement rate (approximately 18.5%) compared to Reels.\n"
     "Reels have a much lower average engagement rate (approximately 4.5%).")
-if c:
+if c or k:
     st.pyplot(gf)
     st.write("📉 Key Trend Analysis \n",
 "The plot displays the average daily engagement rate from October 2nd to October 8th, 2025, revealing a highly volatile and fluctuating trend with a clear peak.\n",
@@ -108,14 +108,14 @@ if c:
 "Major Peak (Oct 5): The engagement rate hits its highest point, peaking dramatically at approximately 22%. This date represents the most successful day in terms of overall engagement.\n",
 "Steep Decline (Oct 6 - Oct 8): Following the major peak, the engagement rate drops sharply (to about 9% on Oct 6) and continues a steady decline, ending the plotted period at its lowest point (around 3% on Oct 8).")
 st.write("")
-if z:
+if z or l:
     st.pyplot(pn)
     st.write("🚀 Strategic Conclusion: \n",
 "The data clearly suggests that the best time to post for maximizing average engagement is during the evening hours.\n",
 "Focus on Evening: The creator should prioritize posting content during the evening window to take advantage of the higher engagement. This likely corresponds to a time when the target audience is most active and consuming content.Re-evaluate .\n", 
 "Night Strategy: Posting content at night generates a respectable, but lower, engagement rate. The creator could consider shifting content intended for the night to the evening, or if night posting must continue, investigate if a specific window within the night period performs better than others.\n",
 "The difference in average engagement rate between evening and night is roughly $1.9\%$ ($9.5\% - 7.6\%$), which is a significant lift when considering overall audience interaction.")
-if e:
+if e or m:
     st.pyplot(po)
     st.write("🔵 Interpretation for Reels (Blue Dots):\n"
     ,"Negative Correlation: For Reels, there appears to be a general negative correlation between duration and engagement rate. As the duration increases, the engagement rate tends to decrease, although the relationship is not perfectly linear.\n",
@@ -128,13 +128,13 @@ if e:
     "High Engagement: Critically, all three Post data points show significantly higher engagement rates than any of the Reels.\n",
     "The engagement rates for posts range from about 15.5% to 22.5%. \n",
     "The highest performing piece of content in the entire dataset is a Post (around 22.5% engagement).")
-if f:
+if f or n:
     st.pyplot(gn)
     st.write("⚡ Quick Interpretation \n","The data reveals that shorter content and strong Calls to Action (CTAs) are the most critical factors for success.\n",
              "Engagement Rate is highest when Duration is low ($r = -0.84$) and when the CTA Rate is high ($r = 0.96$).\n",
              "Reach drives raw interaction volume (Likes, Comments, etc.), but high overall Reach significantly lowers the Engagement Rate ($r = -0.84$), suggesting that content seen by non-followers engages less.\n",
              "CTAs are highly effective at driving users to the profile, as CTA Rate is nearly perfectly correlated with Profile Visits and strongly correlated with Follows Gained ($r = 0.88$).")
-if g:
+if g  or p:
     st.write("🔑 Unified Action Plan\n",
 "Allocate Resources to Posts: Create more traditional Post content, as it offers the highest return on engagement.\n",
 "Enforce Strong CTAs: Ensure every piece of content (especially Posts) includes a compelling Call to Action.\n",
