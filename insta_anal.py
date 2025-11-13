@@ -77,7 +77,7 @@ st.text("you want to see analysis one by one use below Buttons :")
 a = st.button("🏆 Highest Engagement Post Details:")
 b = st.button("Engagement Rate for Content Type(Reel/Post)")
 c = st.button("Engagement Rate Over Time ")
-d = st.button("Engagement by Post Time")
+z = st.button("Engagement by Post Time")
 e= st.button("Duration vs Engagement Rate")
 f= st.button("Correlation Between Metrics")
 g= st.button("Final")
@@ -108,7 +108,7 @@ if c:
 "Major Peak (Oct 5): The engagement rate hits its highest point, peaking dramatically at approximately 22%. This date represents the most successful day in terms of overall engagement.\n",
 "Steep Decline (Oct 6 - Oct 8): Following the major peak, the engagement rate drops sharply (to about 9% on Oct 6) and continues a steady decline, ending the plotted period at its lowest point (around 3% on Oct 8).")
 st.write("")
-if d:
+if z:
     st.pyplot(pn)
     st.write("🚀 Strategic Conclusion: \n",
 "The data clearly suggests that the best time to post for maximizing average engagement is during the evening hours.\n",
